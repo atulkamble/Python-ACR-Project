@@ -4,7 +4,7 @@ This guide demonstrates how to **build**, **push**, **pull**, and **run** a Dock
 
 ```
 git clone https://github.com/atulkamble/python-acr-project.git
- cd python-acr-project
+cd python-acr-project
 ```
 
 ---
