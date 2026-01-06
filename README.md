@@ -2,13 +2,10 @@
 
 This guide demonstrates how to **build**, **push**, **pull**, and **run** a Dockerized Python application using **Azure Container Registry**, and finally deploy it on **Azure Container Instances**.
 
-![Image](https://learn.microsoft.com/en-us/azure/architecture/hybrid/images/hybrid-containers.png)
-
-![Image](https://media2.dev.to/dynamic/image/width%3D1000%2Cheight%3D420%2Cfit%3Dcover%2Cgravity%3Dauto%2Cformat%3Dauto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fp9z3gdm4rm21cu4jtljr.jpg)
-
-![Image](https://k21academy.com/wp-content/uploads/2020/10/AzureContainer_Diagram.png)
-
-![Image](https://alaintd.github.io/assets/img/posts/2022-05-04-How-to-pull-deploy-image-from-ACR-to-App-Service/GitHub-Actions-Pull-Deploy.png)
+```
+git clone https://github.com/atulkamble/python-acr-project.git
+ cd python-acr-project
+```
 
 ---
 
