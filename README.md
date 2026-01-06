@@ -1,7 +1,3 @@
-Below is a **clean, structured, production-ready documentation** you can directly use in a **README / lab guide / training notes** for **Azure Container Registry (ACR) + Docker + Azure Container Instances (ACI)**.
-
----
-
 # 🚀 Deploying a Python Docker App using Azure Container Registry (ACR)
 
 This guide demonstrates how to **build**, **push**, **pull**, and **run** a Dockerized Python application using **Azure Container Registry**, and finally deploy it on **Azure Container Instances**.
@@ -218,12 +214,3 @@ cloudnautic-azure-acr-aci-python
 ```
 
 ---
-
-If you want, I can next:
-
-* Add **ACI deployment via Azure CLI**
-* Convert this into a **GitHub README**
-* Add **Terraform / Bicep automation**
-* Integrate with **AKS instead of ACI**
-
-Just tell me 👍
