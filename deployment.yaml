@@ -14,10 +14,12 @@ spec:
       labels:
         app: flask-app
     spec:
+      imagePullSecrets:
+      - name: acr-secret
       containers:
       - name: flask-app
-        image: flask-app:latest
-        imagePullPolicy: Never  # For local Minikube images
+        image: atulkamble.azurecr.io/cloudnautic/basic-python-app:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000
           name: http
