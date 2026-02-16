@@ -75,10 +75,7 @@ sudo docker buildx build \
 Use this when building on macOS (Apple Silicon) or mixed architectures:
 
 ```bash
-sudo docker buildx build \
-  --platform linux/amd64 \
-  -t atulkamble.azurecr.io/cloudnautic/basic-python-app:latest \
-  --load .
+sudo docker buildx build --platform linux/arm64/v8 -t atulkamble.azurecr.io/cloudnautic/basic-python-app:latest --load .
 ```
 
 ---
