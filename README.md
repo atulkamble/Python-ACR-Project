@@ -3,8 +3,8 @@
 This guide demonstrates how to **build**, **push**, **pull**, and **run** a Dockerized Python application using **Azure Container Registry**, and finally deploy it on **Azure Container Instances**.
 
 ```
-git clone https://github.com/atulkamble/python-acr-project.git
-cd python-acr-project
+git clone https://github.com/atulkamble/Python-ACR-Project.git
+cd Python-ACR-Project
 ```
 
 ---
@@ -53,6 +53,10 @@ Authenticate Docker with your ACR:
 ```bash
 az acr login --name atulkamble
 ```
+OR 
+```
+docker login -u atuljkamble
+```
 
 ✅ This allows Docker to push/pull images securely.
 
@@ -63,9 +67,11 @@ az acr login --name atulkamble
 ### 🔹 Option 1: Standard Build
 
 ```bash
-sudo docker buildx build \
-  -t atulkamble.azurecr.io/cloudnautic/basic-python-app:latest \
-  --load .
+sudo docker buildx build --platform linux/amd64,linux/arm64 -t docker.io/atuljkamble/pythonapp:latest --load .
+```
+OR
+```bash
+sudo docker buildx build --platform linux/amd64,linux/arm64 -t atulkamble.azurecr.io/cloudnautic/basic-python-app:latest --load .
 ```
 
 ---
@@ -76,6 +82,24 @@ Use this when building on macOS (Apple Silicon) or mixed architectures:
 
 ```bash
 sudo docker buildx build --platform linux/arm64/v8 -t atulkamble.azurecr.io/cloudnautic/basic-python-app:latest --load .
+```
+
+### Docker Practice 
+```
+docker images
+docker push docker.io/atuljkamble/pythonapp:latest  
+docker images
+docker rmi -f atuljkamble/pythonapp:latest
+docker pull atuljkamble/pythonapp:latest
+docker images 
+docker run -d -p 5000:5000 atuljkamble/pythonapp:latest
+// http://localhost:5000
+docker container ls
+docker container stop e0f3d3307f5a
+docker container ls               
+docker ps -a
+docker container start e0f3d3307f5a
+docker container ls
 ```
 
 ---
@@ -182,6 +206,26 @@ http://20.204.208.81:5000/
 ```
 
 ✅ Application is now running on Azure without any VM!
+
+##  Step 11: Deploy to Kubernetes
+```
+az aks create --resource-group devops --name mycluster --node-count 2 --enable-managed-identity --generate-ssh-keys
+az aks get-credentials --resource-group devops --name mycluster --overwrite-existing
+kubectl get nodes 
+kubectl apply -f aks-deployment.yaml
+kubectl apply -f aks-service.yaml
+kubectl get pods
+kubectl get service
+```
+## 🌍 Step 12: Access App via K8s Service
+
+```
+http://20.29.163.101/
+```
+## Delete Resource Group 
+```
+az group delete -n devops
+```
 
 ---
 
