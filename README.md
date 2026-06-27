@@ -6,7 +6,7 @@
 
 ## ☸️ Azure Kubernetes Service (AKS)
 
-## Lab Overview
+# Lab Overview
 
 In this lab, you will learn how to:
 
