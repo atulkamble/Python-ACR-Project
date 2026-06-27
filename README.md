@@ -1,7 +1,10 @@
-# 🚀 Deploying a Python Docker Application using 
-# 🐳 Azure Container Registry (ACR)
-# 📦 Azure Container Instances (ACI)
-# ☸️ Azure Kubernetes Service (AKS)
+# 🚀 Deploying a Python Docker Application
+
+## 🐳 Azure Container Registry (ACR)
+
+## 📦 Azure Container Instances (ACI)
+
+## ☸️ Azure Kubernetes Service (AKS)
 
 ## Lab Overview
 
