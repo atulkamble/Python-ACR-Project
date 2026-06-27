@@ -28,8 +28,8 @@ az aks get-credentials --resource-group devops --name mycluster --overwrite-exis
 
 kubectl get nodes 
 
-kubectl apply -f aks-deployment.yaml
-kubectl apply -f aks-service.yaml
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
 
 kubectl get pods
 kubectl get service 
